@@ -31,17 +31,6 @@ json_object_set(object, "age", json_number(29));
 json_free(object);
 ```
 
-Array
-
-```C
-json_t array = json_array();
-
-json_array_push(array, json_string("Luke"));
-json_array_push(array, json_number(29));
-
-json_free(array);
-```
-
 Object iteration
 
 ```C
@@ -51,6 +40,17 @@ for (i = json_object_begin(object); i != json_object_end(object); i++)
     const char* key = i->key;
     json_t val = i->val;
 }
+```
+
+Array
+
+```C
+json_t array = json_array();
+
+json_array_push(array, json_string("Luke"));
+json_array_push(array, json_number(29));
+
+json_free(array);
 ```
 
 Array iteration
