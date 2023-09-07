@@ -36,8 +36,8 @@ Array
 ```C
 json_t array = json_array();
 
-json_array_append(array, json_string("Luke"));
-json_array_append(array, json_number(29));
+json_array_push(array, json_string("Luke"));
+json_array_push(array, json_number(29));
 
 json_free(array);
 ```
