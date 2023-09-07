@@ -67,12 +67,15 @@ Parse
 
 ```C
 json_t value = json_parse(string);
+json_free(value);
 ```
 
 Dump
 
 ```C
 json_t string = json_dump(val);
+printf("%s\n", json_string_begin(string));
+json_free(string);
 ```
 
 ## License
